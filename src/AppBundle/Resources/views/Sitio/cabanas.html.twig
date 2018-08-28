@@ -1,0 +1,48 @@
+{% extends "AppBundle::Sitio/layout.html.twig" %}
+
+{% block content %}
+
+	<section class="info" id="info">
+		<div class="container">
+			<h2>Nuestras casas</h2>
+			<p><b>Pasajeros:</b> Hasta 5 personas</p>
+			<p><b>Superficie:</b> 62m2</p>
+			<h3>Equipamiento planta baja</h3>
+			<ul class="int">
+				<li><span>&check;</span>Cocina con horno tradicional</li>
+				<li><span>&check;</span>Heladera con freezer</li>
+				<li><span>&check;</span>Microondas</li>
+				<li><span>&check;</span>Cafetera eléctrica</li>
+				<li><span>&check;</span>Vajilla completa</li>
+				<li><span>&check;</span>Sillón cama 1 plaza</li>
+				<li><span>&check;</span>TV 21''</li>
+				<li><span>&check;</span>DVD</li>
+				<li><span>&check;</span>Conexión wi-fi</li>
+				<li><span>&check;</span>Baño amplio con ducha y secador de pelo</li>
+				<li><span>&check;</span>Calefactor tiro balanceado</li>
+				<li><span>&check;</span>Parrilla y espacio exterior individual</li>
+				<li><span>&check;</span>Espacio para estacionar</li>
+				<li><span>&check;</span>Ducha exterior con agua caliente</li>
+
+			</ul>
+			<h3>Equipamiento planta alta</h3>
+			<ul>
+				<li><span>&check;</span>1 dormitorio matrimonial con amplios placares y cortinas black out</li>
+				<li><span>&check;</span>TV LCD 24''</li>
+				<li><span>&check;</span>Ventilador de techo</li>
+				<li><span>&check;</span>Puerta protectora para chicos en parte superior de la escalera</li>
+				<li><span>&check;</span>1 dormitoriocon 2 camas simples de 1 plaza, amplios placares y cortinas black out</li>
+				<li><span>&check;</span>Calefactor tiro balanceado en cada dormitorio</li>
+				<li><span>&check;</span>Baño principal con hidromasaje y secador de pelo</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="gallery" id="gallery">
+		<div class="container">
+			<h2>Galería de fotos</h2>
+			{{ render(controller('AppBundle:Default:galeria',{galeria_id: 2})) }}
+		</div>
+	</section>
+
+{% endblock %}

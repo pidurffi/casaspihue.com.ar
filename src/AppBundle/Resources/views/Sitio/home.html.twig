@@ -1,0 +1,78 @@
+{% extends "AppBundle::Sitio/layout.html.twig" %}
+
+
+    {% block content %}
+    
+    {{ render(controller('AppBundle:Default:promociones')) }}
+	
+	<section class="ficha" id="ficha">
+		<div class="container">
+		    <h2>El Complejo</h2>
+			<div class="row">
+			    <div class="col-lg-6">
+			        <div class="ficha-carousel owl-carousel owl-theme">
+			            {{ render(controller('AppBundle:Default:galeria',{galeria_id: 1})) }}
+			        </div>
+			    </div>
+			    <div class="col-lg-6">
+			        <p>Casas a 80 mts del mar, con todo el confort y el equipamiento para que tengas la mejor estadía.</p>
+			        <p>Contamos con 2 Casas de 62 m2 cada una, con espacios amplios y muy cómodos.<br>Porque ya conoces nuestra atención personalizada y ahora te ofrecemos esta nueva propuesta, ideal para disfrutar con amigos y en familia.</p>
+			        <p>Te esperamos!</p>
+			        <p>Celina y Lucio.</p>
+			        <p>Equipamiento:</p>
+			        <ul class="main-list">
+                        <li><i class="fas fa-check-circle"></i>Nuestra atención personalizada</li>
+                        <li><i class="fas fa-check-circle"></i>Desayuno completo</li>
+                        <li><i class="fas fa-check-circle"></i>Limpieza</li>
+                        <li><i class="fas fa-check-circle"></i>Ropa de blanco</li>
+                        <li><i class="fas fa-check-circle"></i>Lavado de vajilla (sólo una vez al día)</li>
+                        <li><i class="fas fa-check-circle"></i>Sombrillas y reposeras para la playa (solo en temporada alta)</li>
+                        <li><i class="fas fa-check-circle"></i>Conexión wi-fi libre en ambas Casas</li>
+                        <li><i class="fas fa-check-circle"></i>TV LCD</li>
+                        <li><i class="fas fa-check-circle"></i>DVD</li>
+                        <li><i class="fas fa-check-circle"></i>Calefacción en todos los ambientes</li>
+                        <li><i class="fas fa-check-circle"></i>Ventilador de techo</li>
+                        <li><i class="fas fa-check-circle"></i>Cuna y sillita para babé</li>
+                        <li><i class="fas fa-check-circle"></i>Parrillas individuales</li>
+                        <li><i class="fas fa-check-circle"></i>Secador de cabelli</li>
+                        <li><i class="fas fa-check-circle"></i>Heladera con freezer y cocina con horno</li>
+                        <li><i class="fas fa-check-circle"></i>Microondas</li>
+                        <li><i class="fas fa-check-circle"></i>Vajilla completa</li>
+                        <li><i class="fas fa-check-circle"></i>Cafetera eléctrica</li>
+                        <li><i class="fas fa-check-circle"></i>Estacionamiento</li>
+                        <li><i class="fas fa-check-circle"></i>Taller para chicos (en temporada alta)</li>
+                        <li><i class="fas fa-check-circle"></i>Horno de barro (siempre te sorprendemos con algo rico)</li>
+        			</ul>
+			    </div>
+			</div>
+		</div>
+	</section>
+
+	<section class="map" id="ubicacion">
+		<div class="container">
+			<h2>Ubicación</h2>
+		</div>
+		<div id="map"></div>
+	</section>
+
+	<section class="contact" id="contact">
+		<div class="container">
+			<h2>Contacto</h2>
+			<form action="">
+				<div class="row">
+					<div class="col-sm-6">
+						<input type="text" placeholder="Nombre">
+						<input type="text" placeholder="Telefono">
+						<input type="text" placeholder="Email">
+					</div>
+					<div class="col-sm-6">
+						<textarea placeholder="Comentario"></textarea>
+					</div>
+					<div class="col-sm-12">
+						<a href="" class="send">Enviar</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</section>
+{% endblock %}	
