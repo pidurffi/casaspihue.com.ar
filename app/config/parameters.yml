@@ -2,8 +2,8 @@
 parameters:
     database_host: 127.0.0.1
     database_port: null
-    database_name: web451_pihuecasas
-    database_user: web451_pihue
+    database_name: casaspih_db
+    database_user: casaspih_user
     database_password: KyIaRAKthdG4
 #    database_name: web451_mansion
 #    database_user: web451_mansion
