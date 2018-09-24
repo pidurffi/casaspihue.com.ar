@@ -1,7 +1,7 @@
 //INTRO HEIGHT
 var sliderHeight = function(){
-	var thisHeight = $('.slider img').outerHeight();
-	$('.slider, .intro').css('height', thisHeight);
+    var thisHeight = $('.slider img').outerHeight();
+    $('.slider, .intro').css('height', thisHeight);
 };
 
 $(document).ready(function(){
@@ -18,6 +18,17 @@ $(document).ready(function(){
             $('body').removeClass('noScroll');
         }
     });
+    
+    /*FICHA OWL CAROUSEL*/
+    $(".ficha-carousel").owlCarousel({
+        autoplay: true,
+        loop: true,
+        items: 1,
+        nav: true,
+        pagination: false,
+        navigation: true,
+        navigationText : ["<i class='fas fa-angle-left'></i>","<i class='fas fa-angle-right'></i>"]
+    });
 
     /*MOBILE NAV*/
     $('body').on('click', 'nav.active ul li a', function(){
@@ -26,18 +37,18 @@ $(document).ready(function(){
         $('body').removeClass('noScroll');
     });
 
-	//SLIDER
-	$(function(){
-		$('.slider img:gt(0)').hide();
-		setInterval(function(){
-			$('.slider img:first-child').fadeOut(1000)
-				.next('img').fadeIn(1000)
-				.end().appendTo('.slider');},
-		5000);
-	});
+    //SLIDER
+    $(function(){
+        $('.slider img:gt(0)').hide();
+        setInterval(function(){
+            $('.slider img:first-child').fadeOut(1000)
+                .next('img').fadeIn(1000)
+                .end().appendTo('.slider');},
+        5000);
+    });
 
-	//GALLERY TABS
-	var owlGallery = $(".owl-gallery");
+    //GALLERY TABS
+    var owlGallery = $(".owl-gallery");
     owlGallery.owlCarousel({
         singleItem: true,
         pagination: false,
@@ -66,22 +77,22 @@ $(document).ready(function(){
     });
 
     function owlGalleryCurrentPos() {
-			var value = this.owl.currentItem;
-			if(value == 0) {
-				$('.gallery ul li').removeClass('active');
-				$('.gallery ul li.one').addClass('active');
-			} else if(value == 1) {
-				$('.gallery ul li').removeClass('active');
-				$('.gallery ul li.two').addClass('active');
-			} else if(value == 2) {
-				$('.gallery ul li').removeClass('active');
-				$('.gallery ul li.three').addClass('active');
-			}
-		};
+            var value = this.owl.currentItem;
+            if(value == 0) {
+                $('.gallery ul li').removeClass('active');
+                $('.gallery ul li.one').addClass('active');
+            } else if(value == 1) {
+                $('.gallery ul li').removeClass('active');
+                $('.gallery ul li.two').addClass('active');
+            } else if(value == 2) {
+                $('.gallery ul li').removeClass('active');
+                $('.gallery ul li.three').addClass('active');
+            }
+        };
 
-		$(".gallery ul li.one").click(function(){owlGallery.trigger('owl.goTo', 0);})
-		$(".gallery ul li.two").click(function(){owlGallery.trigger('owl.goTo', 1);})
-		$(".gallery ul li.three").click(function(){owlGallery.trigger('owl.goTo', 2);})
+        $(".gallery ul li.one").click(function(){owlGallery.trigger('owl.goTo', 0);})
+        $(".gallery ul li.two").click(function(){owlGallery.trigger('owl.goTo', 1);})
+        $(".gallery ul li.three").click(function(){owlGallery.trigger('owl.goTo', 2);})
 
         function owlWelcomeCurrentPos() {
             var value = this.owl.currentItem;
@@ -104,8 +115,8 @@ $(document).ready(function(){
         $(".owl-welcome-arrows .next").click(function(){owlWelcome.trigger('owl.next');})
         $(".owl-welcome-arrows .prev").click(function(){owlWelcome.trigger('owl.prev');})
 
-	/*GALERIA DE FOTOS*/
-	var initPhotoSwipeFromDOM = function(gallerySelector) {
+    /*GALERIA DE FOTOS*/
+    var initPhotoSwipeFromDOM = function(gallerySelector) {
 
     // parse slide data (url, title, size ...) from DOM elements
     // (children of gallerySelector)
@@ -314,15 +325,15 @@ initPhotoSwipeFromDOM('.my-gallery');
 });
 
 $(window).load(function(){
-	sliderHeight();
-	setTimeout(function(){
-		$('.loading-screen').addClass('off');
-		$('body').removeClass('loading');
-	}, 1000);
+    sliderHeight();
+    setTimeout(function(){
+        $('.loading-screen').addClass('off');
+        $('body').removeClass('loading');
+    }, 1000);
 });
 
 $(window).resize(function(){
-	sliderHeight();
+    sliderHeight();
 });
 
 $(window).scroll(function(){
